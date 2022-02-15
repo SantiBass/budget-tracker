@@ -48,7 +48,7 @@ evt.respondWith(
 
 
 // Installing 
-self.addEventListener('install', function (e) {
+self.addEventListener('install', function (evt) {
   evt.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('installing cache : ' + CACHE_NAME)
@@ -58,11 +58,10 @@ self.addEventListener('install', function (e) {
   self.skipWaiting();
 });
 
-// Delete outdated caches
-self.addEventListener('activate', function (e) {
+// Delete outdated caches/activate
+self.addEventListener('activate', function (evt) {
   evt.waitUntil(
     caches.keys().then(function (keyList) {
-
       return Promise.all(keyList.map(function (key ) {
         if (key !== CACHE_NAME &&  key !== DATA_CACHE_NAME) {
           console.log('deleting cache : ' , key );
