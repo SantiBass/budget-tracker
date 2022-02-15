@@ -4,59 +4,72 @@ const DATA_CACHE_NAME = "data-cache-v1"
 const FILES_TO_CACHE = [
   "/",
   "./index.html",
-  "./css/styles.css",
+  "./styles.css",
   ".js/index.js",
   "./icons/icon-96x96.png",
   "./icons/icon-144x144.png"
 ];
 
-// Respond with cached resources
-self.addEventListener('fetch', function (e) {
-  console.log('fetch request : ' + e.request.url)
-  e.respondWith(
-    caches.match(e.request).then(function (request) {
-      if (request) { // if cache is available, respond with cache
-        console.log('responding with cache : ' + e.request.url)
-        return request
-      } else {       // if there are no cache, try fetching request
-        console.log('file is not cached, fetching : ' + e.request.url)
-        return fetch(e.request)
-      }
-
-      // You can omit if/else for console.log & put one line below like this too.
-      // return request || fetch(e.request)
+// Fetch
+self.addEventListener('fetch', function (evt) {
+  console.log('fetch request : ' + evt.request.url)
+  if (evt.request.url.includes("/api/"))
+  evt.respondWith(
+    caches.open(DATA_CACHE_NAME).then(cache => {
+        return fetch(evt.request)
+        .then(response => {
+            if(response.status === 200){
+                cache.put(evt.request.url, response.clone());
+            }
+            return response;
+        }).catch(err =>{
+            return cache.match(evt.request);
+        });
+      }).catch(err =>console.log(err))
+  );
+  return;
+});
+evt.respondWith(
+    fetch(evt.request).catch(function(){
+        return caches.match(evt.request)
+        .then(function(response){
+            if(response){
+                return response;
+            }else if(evt.request.headers.get("accept").includes("text/html")){
+                return caches.match("/");
+            }
+        });
     })
-  )
-})
 
-// Cache resources
+    );
+
+
+
+
+
+// Installing 
 self.addEventListener('install', function (e) {
-  e.waitUntil(
+  evt.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log('installing cache : ' + CACHE_NAME)
       return cache.addAll(FILES_TO_CACHE)
     })
-  )
-})
+  );
+  self.skipWaiting();
+});
 
 // Delete outdated caches
 self.addEventListener('activate', function (e) {
-  e.waitUntil(
+  evt.waitUntil(
     caches.keys().then(function (keyList) {
-      // `keyList` contains all cache names under your username.github.io
-      // filter out ones that has this app prefix to create keeplist
-      let cacheKeeplist = keyList.filter(function (key) {
-        return key.indexOf(APP_PREFIX);
-      })
-      // add current cache name to keeplist
-      cacheKeeplist.push(CACHE_NAME);
 
-      return Promise.all(keyList.map(function (key, i) {
-        if (cacheKeeplist.indexOf(key) === -1) {
-          console.log('deleting cache : ' + keyList[i] );
-          return caches.delete(keyList[i]);
+      return Promise.all(keyList.map(function (key ) {
+        if (key !== CACHE_NAME &&  key !== DATA_CACHE_NAME) {
+          console.log('deleting cache : ' , key );
+          return caches.delete(key);
         }
       }));
     })
   );
+  self.clients.claim();
 });
