@@ -46,6 +46,5 @@
 ## Questions
 ### If you have any questions, please send me an email @ sibarraryan@gmail.com . 
 ### You can visit my GitHub: [SantiBass.](https://github.com/SantiBass)
-### Here is a short video of the app in action: [The Tech Blog video](https://watch.screencastify.com/v/HxguOZmh7muRxHqrBR53) .
 ### Also, you can put this application into action by using this link: [(PWA) Budget-Tracker ](https://budget-tracker1-pwa.herokuapp.com/)  .
 
