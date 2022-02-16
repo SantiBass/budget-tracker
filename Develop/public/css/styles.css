@@ -2,7 +2,7 @@ body {
   font-size: 120%;
   font-family: Arial;
   /* background-color: rgb(152, 211, 235); */
-  background-image: linear-gradient(to left, rgba(87, 78, 78, 0.899), rgb(72, 65, 65),rgb(43, 41, 41) );
+  background-image: linear-gradient(to left, rgba(50, 44, 44, 0.899), rgb(46, 41, 41),rgb(26, 24, 24) );
 }
 
 button, input {
