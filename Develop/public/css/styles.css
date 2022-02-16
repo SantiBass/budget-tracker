@@ -2,7 +2,13 @@ body {
   font-size: 120%;
   font-family: Arial;
   /* background-color: rgb(152, 211, 235); */
-  background-image: linear-gradient(to left, rgba(50, 44, 44, 0.899), rgb(46, 41, 41),rgb(26, 24, 24) );
+  /* background-image: linear-gradient(to left, rgb(203, 211, 218), rgb(182, 186, 189),rgb(77, 74, 74) ); */
+  /* background-image: url("../icons/precondo-ca-GuXhiz45lq8-unsplash.jpg"); */
+  /* background-image: url("../icons/photoholgic-Lp6Q9YQq050-unsplash.jpg"); */
+  /* background-image: url("../icons/sean-oulashin-KMn4VEeEPR8-unsplash\ \(1\).jpg"); */
+  background-image: url("../icons/Baltic-sea-takenby-SantiagoI.JPG");
+  background-size: cover;
+  
 }
 
 button, input {
@@ -13,6 +19,7 @@ button, input {
 
 table {
   width: 100%;
+  color: rgb(0, 0, 0);
 }
 
 td, th {
