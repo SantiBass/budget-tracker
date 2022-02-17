@@ -1,4 +1,4 @@
-console.log("service worker test working") 
+// console.log("service worker test working") 
 const CACHE_NAME= "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 const FILES_TO_CACHE = [
@@ -6,6 +6,7 @@ const FILES_TO_CACHE = [
   "./index.html",
   "./css/styles.css",
   "./js/index.js",
+  "./js/idb.js",
   "./manifest.json",
   "./icons/icon-72x72.png",
   "./icons/icon-96x96.png",
@@ -19,23 +20,23 @@ const FILES_TO_CACHE = [
 
 // Fetch
 self.addEventListener('fetch', function (evt) {
-  console.log('fetch request : ' + evt.request.url)
-  if (evt.request.url.includes("/api/"))
+  // console.log('fetch request : ' + evt.request.url)
+  if (evt.request.url.includes("/api/")){
   evt.respondWith(
-    caches.open(DATA_CACHE_NAME).then(async cache => {
-        try {
-            const response = await fetch(evt.request);
+    caches.open(DATA_CACHE_NAME).then( cache => {
+        
+            const response =  fetch(evt.request);
             if (response.status === 200) {
                 cache.put(evt.request.url, response.clone());
             }
-            return response;
-        } catch (err) {
-            return await cache.match(evt.request);
-        }
+            return response;})
+       .catch (err => {
+            return cache.match(evt.request);
+        
       }).catch(err =>console.log(err))
   );
   return;
-
+    }
 evt.respondWith(
     fetch(evt.request).catch(function(){
         return caches.match(evt.request)
@@ -47,10 +48,10 @@ evt.respondWith(
             }
         });
     })
+)
+  });
 
-    );
-
-});
+  
 
 
 
@@ -79,3 +80,4 @@ self.addEventListener('activate', function (evt) {
   );
   self.clients.claim();
 });
+
