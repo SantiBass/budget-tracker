@@ -14,7 +14,7 @@
 * [Questions](#questions)
 
 ## Installation
-#### A few dependencies are needed for this application to run. We need [mongoose](https://www.npmjs.com/package/mongoose) and [Express](https://www.npmjs.com/package/express) dependencies installed in [Visual Studio Code](https://code.visualstudio.com/) by typing "npm i mongodb" and "npm i express".
+#### A few dependencies are needed for this application to run. We need to run `npm i` [mongodb](https://www.npmjs.com/package/mongodb),  [mongoose](https://www.npmjs.com/package/mongoose),  and [Express](https://www.npmjs.com/package/express) dependencies installed in [Visual Studio Code](https://code.visualstudio.com/) by typing "npm i mongodb" and "npm i express".
 
 
 ## License
