@@ -1,7 +1,6 @@
-# Budget Tracker Starter Code
+# Budget Tracker
 
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
 ## Description.
 ### The "Budget Tracker" is an application that uses the "Progressive Web Application" (PWA) principle, which allows the user to use this application with or without internet connection. With this application, the user can keep track of income and expenses by adding or subtracting either of them. You can see the application in action by clicking this link: (PWA) [Budget-Tracker](https://budget-tracker1-pwa.herokuapp.com/). This application was deployed through: [Heroku](https://devcenter.heroku.com/).
