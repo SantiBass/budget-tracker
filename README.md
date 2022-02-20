@@ -48,10 +48,12 @@
 ![BudgetTracker](https://user-images.githubusercontent.com/90415841/154858705-0bb53e00-ef0e-4c27-b417-d6882f013bef.png)
 
 
-#### Screenshot of the `"Budget Tracker"` app getting ready to be downloaded in the user's desktop.
+#### Screenshot of the `"Budget Tracker"` app getting ready to be downloaded in the user's computer.
 ![BudgetTrackerDownload](https://user-images.githubusercontent.com/90415841/154858719-3e2f65c6-190a-4774-846a-de1ca7921037.png)
 
 
+#### Screenshot of the `"Budget Tracker"` app downloaded in the user's computer.
+![BudgetTrackerDownloaded](https://user-images.githubusercontent.com/90415841/154859049-59d33c15-4b0a-4c2c-9bdf-26515215dc24.png)
 
 ## Questions
 ### If you have any questions, please send me an email @ sibarraryan@gmail.com. 
