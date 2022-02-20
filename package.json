@@ -22,7 +22,8 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "mongodb": "^4.3.1",
-    "mongoose": "^5.13.14"
-    
+    "mongoose": "^5.13.14",
+    "morgan": "^1.10.0",
+    "webpack-pwa-manifest": "^4.3.0"
   }
 }
