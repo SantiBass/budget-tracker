@@ -48,7 +48,7 @@
 ![BudgetTracker](https://user-images.githubusercontent.com/90415841/154857353-8b1237e6-9ccf-40a4-a054-9fe8b3fb48de.png)
 
 
-![BudgetTrackerDownload](https://user-images.githubusercontent.com/90415841/154857254-d8bc9ee0-d96d-421c-8fe1-f2131788d4ec.png)
+<!-- ![BudgetTrackerDownload](https://user-images.githubusercontent.com/90415841/154857254-d8bc9ee0-d96d-421c-8fe1-f2131788d4ec.png) -->
 
 
 ## Questions
