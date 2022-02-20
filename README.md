@@ -45,7 +45,11 @@
 #### Here are some screenshots of the application.
 ##### Screenshot of the Budget Tracker app page.
 #####  In this screenshot, we can see how the budget curve in the graph changes depending on plus or minus dollar amount entered by the user.
-<img width="1438" alt="BudgetTracker" src="https://user-images.githubusercontent.com/90415841/154856513-14ed7e15-ab6a-41b3-8839-2d52f4468a39.png">
+![BudgetTracker](https://user-images.githubusercontent.com/90415841/154857353-8b1237e6-9ccf-40a4-a054-9fe8b3fb48de.png)
+
+
+![BudgetTrackerDownload](https://user-images.githubusercontent.com/90415841/154857254-d8bc9ee0-d96d-421c-8fe1-f2131788d4ec.png)
+
 
 ## Questions
 ### If you have any questions, please send me an email @ sibarraryan@gmail.com. 
