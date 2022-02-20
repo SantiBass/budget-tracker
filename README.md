@@ -58,7 +58,7 @@
 #### Screenshot of the `"Budget Tracker"` app working offline
 ![BudgetTrackerOffline](https://user-images.githubusercontent.com/90415841/154859945-ff70efd4-10ea-49f1-bb03-472399492679.png)
 
-#### Screenshot of the `"Budget Tracker"` app mainest.json. 
+#### Screenshot of the `"Budget Tracker"` app manifest.json. 
 ![BudgetTrackerOffline](https://user-images.githubusercontent.com/90415841/154859858-07d5697b-a336-4263-9696-969bcbb6b2aa.png)
 
 
